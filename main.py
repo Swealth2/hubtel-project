@@ -18,7 +18,7 @@ driver.get('https://explore.hubtel.com/schools/')
 time.sleep(10)
 driver.get('https://app-raiseup.hubtel.com/login')
 
-#Waith for the "LET'S GO!" link to b
+#Waith for the "LET'S GO!" link to be clickable
 
 element = WebDriverWait(driver, 30).until(
     EC.element_to_be_clickable((By.LINK_TEXT, "LET'S GO!")))
@@ -52,11 +52,11 @@ for i in range(frequency):
 
 element.click()
 
-
+#continue navigating
 driver.get('https://app-raiseup.hubtel.com/registration/status')
 time.sleep(10)
 
-# time.sleep(10)
+
 
 # Use WebDriverWait to wait for the link to be clickable
 link_element = WebDriverWait(driver, 10.3).until(
@@ -67,6 +67,7 @@ link_element.click()
 time.sleep(10.0)
 driver.find_element_by_link_text("Terms of Use and Privacy Policy")
 
+#Class definition for the first image test case
 class Myimga(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -74,7 +75,8 @@ class Myimga(unittest.TestCase):
         self.driver.maximize_window()
         time.sleep(5)
 
-    def image1(self):
+#Find elements related to the first image
+    def test_image_1(self):
         self.driver.find_element_by_id('education')
         self.driver.find_element_by_xpath('/html/body/div[5]/div/div[2]/div[1]/div/div/div[1]/img')
         self.driver.find_element_by_css_selector('body > div.content > div > div:nth-child(2) > div.text-center.py-5 > div > div > div:nth-child(1) > img')
@@ -86,10 +88,10 @@ class Myimga(unittest.TestCase):
     def tearDown(self) -> None:
         self.driver.close()
 
-
+#Run the test case
 if __name__ == '__main__':
     unittest.main()
-
+#Class defination for the second image test case
 class image2(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -98,6 +100,7 @@ class image2(unittest.TestCase):
         time.sleep(5)
 
     def image2(self):
+        #Find elements related to the second image
         self.driver.find_element_by_id('Stay Informed')
         self.driver.find_element_by_xpath("/html/body/div[5]/div/div[2]/div[1]/div/div/div[2]/img")
         self.driver.find_element_by_css_selector('body > div.content > div > div:nth-child(2) > div.text-center.py-5 > div > div > div:nth-child(2) > img')
@@ -106,7 +109,7 @@ class image2(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
-
+#Class defination for the third image test case
 class image3(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -115,6 +118,7 @@ class image3(unittest.TestCase):
         time.sleep(5)
 
     def image3(self):
+        #Find elements related to the third image
         self.driver.find_element_by_id('Manage PickUps')
         self.driver.find_element_by_xpath("/html/body/div[5]/div/div[2]/div[1]/div/div/div[3]/img")
         self.driver.find_element_by_css_selector(
@@ -125,7 +129,7 @@ class image3(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
-
+#Class defination for the fourth image test case
 class image4(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -134,6 +138,7 @@ class image4(unittest.TestCase):
         time.sleep(5)
 
     def image4(self):
+        #Find elements related to the fourth image test
         self.driver.find_element_by_id('pay School fees')
         self.driver.find_element_by_xpath("/html/body/div[5]/div/div[2]/div[1]/div/div/div[4]/img")
         self.driver.find_element_by_css_selector(
@@ -143,7 +148,7 @@ class image4(unittest.TestCase):
 
     def tearDown(self):
         self.driver.close()
-
+#Class defination for the fifth image test case
 class image5(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -152,6 +157,7 @@ class image5(unittest.TestCase):
         time.sleep(5)
 
     def image5(self):
+        #Find elements ralated to the fifth image test
         self.driver.find_element_by_id('manage-permissions')
         self.driver.find_element_by_xpath("/html/body/div[5]/div/div[2]/div[1]/div/div/div[5]/img")
         self.driver.find_element_by_css_selector(
@@ -161,7 +167,7 @@ class image5(unittest.TestCase):
 
     def tearDown(self):
         self.driver.close()
-
+#class defination for the sixth image test case
 class image6 (unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -170,6 +176,7 @@ class image6 (unittest.TestCase):
         time.sleep(5)
 
     def image5(self):
+        #Find elements related to the sixth image
         self.driver.find_element_by_id('Bring Family Together')
         self.driver.find_element_by_xpath("/html/body/div[5]/div/div[2]/div[1]/div/div/div[6]/img")
         self.driver.find_element_by_css_selector(
